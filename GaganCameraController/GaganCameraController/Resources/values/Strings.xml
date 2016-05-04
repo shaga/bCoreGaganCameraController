@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">GaganCameraController</string>
+
+  <string name="BtnScanStart">Scan Start</string>
+  <string name="BtnScanStop">Scan Stop</string>
+  <string name="LblCamUrl">Camera URL</string>
+  <string name="LblServoSetting">Servo Position</string>
+  <string name="ConnectingMessage">Connecting...</string>
+  <string name="Disconnectedmessage">Disconnected bCore.</string>
+  <string name="MsgDisconnectedBcore">Bcore is disconnected...</string>
+
+  <string name="MenuSettings">Settings</string>
+
+  <string name="BtnTextSet">SET</string>
+  <string name="BtnTextCheck">CHECK</string>
+</resources>
