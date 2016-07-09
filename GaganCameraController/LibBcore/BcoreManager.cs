@@ -67,7 +67,9 @@ namespace LibBcore
 
         #region property
 
-        public bool IsConnected { get; set; }
+        public bool IsConnected { get; private set; }
+
+        public bool IsInitialized { get; private set; }
 
         private BluetoothManager BluetoothManager { get;}
         private BluetoothAdapter BluetoothAdapter => BluetoothManager.Adapter;
@@ -85,7 +87,8 @@ namespace LibBcore
 
         #region event
 
-        public event EventHandler<BcoreConnectionChangedEventArgs> BcoreConnectionChanged; 
+        public event EventHandler<BcoreConnectionChangedEventArgs> BcoreConnectionChanged;
+        public event EventHandler BcoreServiceDiscovered;
         public event EventHandler<ReadBatteryVoltageEventArgs> ReadBatteryResult;
         public event EventHandler<ReadFunctionsEventArgs> ReadFunctionResult;
 
@@ -127,11 +130,13 @@ namespace LibBcore
                 case ProfileState.Connecting:
                     break;
                 case ProfileState.Disconnecting:
+                    IsInitialized = false;
                     IsConnected = false;
                     break;
                 case ProfileState.Disconnected:
                     BcoreConnectionChanged?.Invoke(this, new BcoreConnectionChangedEventArgs(false));
                     IsConnected = false;
+                    IsInitialized = false;
                     break;
             }
         }
@@ -152,8 +157,11 @@ namespace LibBcore
             {
                 BcoreCharacteristics.Add(characteristic.Uuid.ToString().ToLower(), characteristic);
             }
-        }
 
+            IsInitialized = true;
+            BcoreServiceDiscovered?.Invoke(this, EventArgs.Empty);
+        }
+    
         public override void OnCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, GattStatus status)
         {
             base.OnCharacteristicRead(gatt, characteristic, status);

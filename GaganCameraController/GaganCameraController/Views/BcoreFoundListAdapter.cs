@@ -43,7 +43,7 @@ namespace GaganCameraController.Views
 
         public override Android.Views.View GetView(int position, Android.Views.View convertView, ViewGroup parent)
         {
-            var view = convertView ?? Inflater.Inflate(Android.Resource.Layout.SimpleListItem2, parent, false);
+            var view = convertView ?? Inflater.Inflate(Android.Resource.Layout.SimpleListItemActivated2, parent, false);
 
             var item = GetItem(position) as BcoreDeviceInfo;
 

@@ -1,17 +1,26 @@
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Android.App;
+using Android.Content;
+using Android.Gms.Common.Apis;
+using Android.Gms.Wearable;
+using Android.Media;
+using Android.Content.PM;
+using Android.Hardware;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Com.Camera.Simplemjpeg;
 using GaganCameraController.Model;
+using Java.Interop;
+using Encoding = System.Text.Encoding;
 
 namespace GaganCameraController.Views
 {
-    [Activity(Label = "ControllerActivity", Theme = "@style/AppTheme.NoActionBar")]
-    public class ControllerActivity : AppCompatActivity
+    [Activity(Label = "ControllerActivity", Theme = "@style/AppTheme.NoActionBar", ScreenOrientation = ScreenOrientation.Landscape)]
+    public class ControllerActivity : AppCompatActivity, ISensorEventListener
     {
         public const string ExtraKeyAddr = "GaganCameraController.Views.ControllerActivity.Addr";
 
@@ -27,6 +36,8 @@ namespace GaganCameraController.Views
         private bool IsCamSuspended { get; set; }
 
         private bool IsShowSetting { get; set; }
+
+        private SensorManager SensorManager => GetSystemService(SensorService) as SensorManager;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -73,6 +84,7 @@ namespace GaganCameraController.Views
             transaction.Add(Resource.Id.FrameFragment, SettingFragment);
             transaction.Hide(SettingFragment);
             transaction.Commit();
+
         }
 
         protected override void OnResume()
@@ -83,6 +95,8 @@ namespace GaganCameraController.Views
             {
                 BeginStream();
             }
+
+            InitSensor();
         }
 
         protected override void OnPause()
@@ -94,6 +108,8 @@ namespace GaganCameraController.Views
                 CamView?.StopPlayback();
                 IsCamSuspended = true;
             }
+
+            FinishSensor();
         }
 
         protected override void OnDestroy()
@@ -144,6 +160,20 @@ namespace GaganCameraController.Views
                 return;
             }
             base.OnBackPressed();
+        }
+
+        private void InitSensor()
+        {
+            var manager = GetSystemService(Context.SensorService) as SensorManager;
+
+            manager?.RegisterListener(this, manager.GetDefaultSensor(SensorType.Accelerometer), SensorDelay.Ui);
+        }
+
+        private void FinishSensor()
+        {
+            var manager = GetSystemService(SensorService) as SensorManager;
+
+            manager?.UnregisterListener(this);
         }
 
         public void BeginStream()
@@ -207,6 +237,16 @@ namespace GaganCameraController.Views
             transaction.Commit();
             FragmentManager.InvalidateOptionsMenu();
             IsShowSetting = showSetting;
+        }
+
+        public void OnAccuracyChanged(Sensor sensor, SensorStatus accuracy)
+        {
+            
+        }
+
+        public void OnSensorChanged(SensorEvent e)
+        {
+
         }
     }
 }

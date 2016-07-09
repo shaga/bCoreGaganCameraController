@@ -135,7 +135,7 @@ namespace LibBcore
 
             if (IsAfterLollipop)
             {
-                Scanner.StartScan(Filters, ScanSettings, Callback);
+                Scanner.StartScan(null, ScanSettings, Callback);
             }
             else
             {
