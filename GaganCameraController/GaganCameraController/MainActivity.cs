@@ -16,6 +16,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Support.V7.App;
+using GaganCameraController.Model;
 using GaganCameraController.Views;
 using GaganCameraMessage;
 using Javax.Crypto.Interfaces;
@@ -147,6 +148,9 @@ namespace GaganCameraController
             var item = Adapter[e.Position];
 
             if (item == null) return;
+
+            var manager = new WifiCamManager();
+            manager.ConnectCam();
 
             Android.Util.Log.Debug("MainActivity", "Clicked:{0}/{1}", item.Name, item.Addr);
             var intent = new Intent(this, typeof(ControllerActivity));

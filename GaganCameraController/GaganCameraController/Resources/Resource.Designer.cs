@@ -963,6 +963,9 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f0100ce
 			public const int track = 2130772174;
 			
+			// aapt resource value: 0x7f01012e
+			public const int type = 2130772270;
+			
 			// aapt resource value: 0x7f01010a
 			public const int useCompatPadding = 2130772234;
 			
@@ -2099,26 +2102,26 @@ namespace GaganCameraController
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090096
-			public const int BtnScan = 2131296406;
+			// aapt resource value: 0x7f090094
+			public const int BtnScan = 2131296404;
+			
+			// aapt resource value: 0x7f090098
+			public const int BtnSetCamUrl = 2131296408;
 			
 			// aapt resource value: 0x7f09009a
-			public const int BtnSetCamUrl = 2131296410;
+			public const int BtnSetServoLeft = 2131296410;
 			
-			// aapt resource value: 0x7f09009c
-			public const int BtnSetServoLeft = 2131296412;
+			// aapt resource value: 0x7f09009b
+			public const int BtnSetServoRight = 2131296411;
 			
-			// aapt resource value: 0x7f09009d
-			public const int BtnSetServoRight = 2131296413;
-			
-			// aapt resource value: 0x7f090097
-			public const int BtnStart = 2131296407;
+			// aapt resource value: 0x7f090095
+			public const int BtnStart = 2131296405;
 			
 			// aapt resource value: 0x7f090076
 			public const int BtnStop = 2131296374;
 			
-			// aapt resource value: 0x7f090088
-			public const int ButtonScan = 2131296392;
+			// aapt resource value: 0x7f090086
+			public const int ButtonScan = 2131296390;
 			
 			// aapt resource value: 0x7f090078
 			public const int CamView = 2131296376;
@@ -2126,38 +2129,32 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f090075
 			public const int CameraView = 2131296373;
 			
-			// aapt resource value: 0x7f09007b
-			public const int ControllerView = 2131296379;
+			// aapt resource value: 0x7f090079
+			public const int ControllerView = 2131296377;
+			
+			// aapt resource value: 0x7f090097
+			public const int EditCamUrl = 2131296407;
+			
+			// aapt resource value: 0x7f090084
+			public const int ListFoundBcore = 2131296388;
+			
+			// aapt resource value: 0x7f090096
+			public const int ProgressScan = 2131296406;
+			
+			// aapt resource value: 0x7f090085
+			public const int ProgressScanning = 2131296389;
 			
 			// aapt resource value: 0x7f090099
-			public const int EditCamUrl = 2131296409;
+			public const int SeekLeftCamPos = 2131296409;
 			
-			// aapt resource value: 0x7f090079
-			public const int FrameFragment = 2131296377;
+			// aapt resource value: 0x7f09009c
+			public const int SeekRightCamPos = 2131296412;
 			
-			// aapt resource value: 0x7f090086
-			public const int ListFoundBcore = 2131296390;
-			
-			// aapt resource value: 0x7f090098
-			public const int ProgressScan = 2131296408;
+			// aapt resource value: 0x7f09009d
+			public const int ShowMenuSetting = 2131296413;
 			
 			// aapt resource value: 0x7f090087
-			public const int ProgressScanning = 2131296391;
-			
-			// aapt resource value: 0x7f09009b
-			public const int SeekLeftCamPos = 2131296411;
-			
-			// aapt resource value: 0x7f09009e
-			public const int SeekRightCamPos = 2131296414;
-			
-			// aapt resource value: 0x7f09009f
-			public const int ShowMenuSetting = 2131296415;
-			
-			// aapt resource value: 0x7f09007a
-			public const int TextConnectMessage = 2131296378;
-			
-			// aapt resource value: 0x7f090089
-			public const int action0 = 2131296393;
+			public const int action0 = 2131296391;
 			
 			// aapt resource value: 0x7f090066
 			public const int action_bar = 2131296358;
@@ -2183,8 +2180,8 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f090067
 			public const int action_context_bar = 2131296359;
 			
-			// aapt resource value: 0x7f09008d
-			public const int action_divider = 2131296397;
+			// aapt resource value: 0x7f09008b
+			public const int action_divider = 2131296395;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -2234,8 +2231,8 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f090050
 			public const int buttonPanel = 2131296336;
 			
-			// aapt resource value: 0x7f09008a
-			public const int cancel_action = 2131296394;
+			// aapt resource value: 0x7f090088
+			public const int cancel_action = 2131296392;
 			
 			// aapt resource value: 0x7f090019
 			public const int center = 2131296281;
@@ -2249,8 +2246,8 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f09005e
 			public const int checkbox = 2131296350;
 			
-			// aapt resource value: 0x7f090090
-			public const int chronometer = 2131296400;
+			// aapt resource value: 0x7f09008e
+			public const int chronometer = 2131296398;
 			
 			// aapt resource value: 0x7f09001c
 			public const int clip_horizontal = 2131296284;
@@ -2282,20 +2279,20 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f09004c
 			public const int default_activity_button = 2131296332;
 			
-			// aapt resource value: 0x7f09007d
-			public const int design_bottom_sheet = 2131296381;
-			
-			// aapt resource value: 0x7f090084
-			public const int design_menu_item_action_area = 2131296388;
-			
-			// aapt resource value: 0x7f090083
-			public const int design_menu_item_action_area_stub = 2131296387;
+			// aapt resource value: 0x7f09007b
+			public const int design_bottom_sheet = 2131296379;
 			
 			// aapt resource value: 0x7f090082
-			public const int design_menu_item_text = 2131296386;
+			public const int design_menu_item_action_area = 2131296386;
 			
 			// aapt resource value: 0x7f090081
-			public const int design_navigation_view = 2131296385;
+			public const int design_menu_item_action_area_stub = 2131296385;
+			
+			// aapt resource value: 0x7f090080
+			public const int design_menu_item_text = 2131296384;
+			
+			// aapt resource value: 0x7f09007f
+			public const int design_navigation_view = 2131296383;
 			
 			// aapt resource value: 0x7f090029
 			public const int disableHome = 2131296297;
@@ -2306,8 +2303,8 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f09001e
 			public const int end = 2131296286;
 			
-			// aapt resource value: 0x7f090095
-			public const int end_padder = 2131296405;
+			// aapt resource value: 0x7f090093
+			public const int end_padder = 2131296403;
 			
 			// aapt resource value: 0x7f09003c
 			public const int enterAlways = 2131296316;
@@ -2357,8 +2354,8 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f09004b
 			public const int image = 2131296331;
 			
-			// aapt resource value: 0x7f090094
-			public const int info = 2131296404;
+			// aapt resource value: 0x7f090092
+			public const int info = 2131296402;
 			
 			// aapt resource value: 0x7f090000
 			public const int item_touch_helper_previous_elevation = 2131296256;
@@ -2369,11 +2366,11 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f090013
 			public const int light = 2131296275;
 			
-			// aapt resource value: 0x7f09008e
-			public const int line1 = 2131296398;
+			// aapt resource value: 0x7f09008c
+			public const int line1 = 2131296396;
 			
-			// aapt resource value: 0x7f090092
-			public const int line3 = 2131296402;
+			// aapt resource value: 0x7f090090
+			public const int line3 = 2131296400;
 			
 			// aapt resource value: 0x7f090026
 			public const int listMode = 2131296294;
@@ -2381,11 +2378,11 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f09004d
 			public const int list_item = 2131296333;
 			
-			// aapt resource value: 0x7f090085
-			public const int main_toolbar = 2131296389;
+			// aapt resource value: 0x7f090083
+			public const int main_toolbar = 2131296387;
 			
-			// aapt resource value: 0x7f09008c
-			public const int media_actions = 2131296396;
+			// aapt resource value: 0x7f09008a
+			public const int media_actions = 2131296394;
 			
 			// aapt resource value: 0x7f090036
 			public const int middle = 2131296310;
@@ -2396,8 +2393,8 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f090030
 			public const int multiply = 2131296304;
 			
-			// aapt resource value: 0x7f090080
-			public const int navigation_header_container = 2131296384;
+			// aapt resource value: 0x7f09007e
+			public const int navigation_header_container = 2131296382;
 			
 			// aapt resource value: 0x7f09003a
 			public const int never = 2131296314;
@@ -2492,11 +2489,11 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f09002d
 			public const int showTitle = 2131296301;
 			
-			// aapt resource value: 0x7f09007f
-			public const int snackbar_action = 2131296383;
+			// aapt resource value: 0x7f09007d
+			public const int snackbar_action = 2131296381;
 			
-			// aapt resource value: 0x7f09007e
-			public const int snackbar_text = 2131296382;
+			// aapt resource value: 0x7f09007c
+			public const int snackbar_text = 2131296380;
 			
 			// aapt resource value: 0x7f090040
 			public const int snap = 2131296320;
@@ -2522,8 +2519,8 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f090024
 			public const int start = 2131296292;
 			
-			// aapt resource value: 0x7f09008b
-			public const int status_bar_latest_event_content = 2131296395;
+			// aapt resource value: 0x7f090089
+			public const int status_bar_latest_event_content = 2131296393;
 			
 			// aapt resource value: 0x7f090071
 			public const int submit_area = 2131296369;
@@ -2531,17 +2528,17 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f090028
 			public const int tabMode = 2131296296;
 			
-			// aapt resource value: 0x7f090093
-			public const int text = 2131296403;
-			
 			// aapt resource value: 0x7f090091
-			public const int text2 = 2131296401;
+			public const int text = 2131296401;
+			
+			// aapt resource value: 0x7f09008f
+			public const int text2 = 2131296399;
 			
 			// aapt resource value: 0x7f090059
 			public const int textSpacerNoButtons = 2131296345;
 			
-			// aapt resource value: 0x7f09008f
-			public const int time = 2131296399;
+			// aapt resource value: 0x7f09008d
+			public const int time = 2131296397;
 			
 			// aapt resource value: 0x7f09004f
 			public const int title = 2131296335;
@@ -2555,8 +2552,8 @@ namespace GaganCameraController
 			// aapt resource value: 0x7f090053
 			public const int topPanel = 2131296339;
 			
-			// aapt resource value: 0x7f09007c
-			public const int touch_outside = 2131296380;
+			// aapt resource value: 0x7f09007a
+			public const int touch_outside = 2131296378;
 			
 			// aapt resource value: 0x7f090009
 			public const int up = 2131296265;
@@ -4865,6 +4862,12 @@ namespace GaganCameraController
 			
 			// aapt resource value: 2
 			public const int CompoundButton_buttonTintMode = 2;
+			
+			public static int[] ControllerArrowView = new int[] {
+					2130772270};
+			
+			// aapt resource value: 0
+			public const int ControllerArrowView_type = 0;
 			
 			public static int[] CoordinatorLayout = new int[] {
 					2130772221,

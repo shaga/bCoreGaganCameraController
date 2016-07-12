@@ -69,7 +69,8 @@ namespace GaganCameraController.Model
                 else
                 {
                     IsTimerRunning = false;
-                    TimerHandler.RemoveCallbacks(OnTimer);
+                    TimerHandler?.RemoveCallbacks(OnTimer);
+                    TimerHandler = null;
                 }
 
                 BcoreConnectionChanged?.Invoke(this, e.IsConnected);

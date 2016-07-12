@@ -65,25 +65,25 @@ namespace GaganCameraController.Views
 
             BeginStream();
 
-            TextMessage = FindViewById<TextView>(Resource.Id.TextConnectMessage);
+            //TextMessage = FindViewById<TextView>(Resource.Id.TextConnectMessage);
 
-            Controller = new GaganController(this);
-            Controller.BcoreConnectionChanged += OnConnectedBcore;
-            Controller.ConnectBcore(Addr);
+            //Controller = new GaganController(this);
+            //Controller.BcoreConnectionChanged += OnConnectedBcore;
+            //Controller.ConnectBcore(Addr);
 
 
-            SettingFragment = SettingFragment.newInstance();
-            SettingFragment.Controller = Controller;
+            //SettingFragment = SettingFragment.newInstance();
+            //SettingFragment.Controller = Controller;
 
-            ControllerFragment = ControllerFragment.NewInstance();
-            ControllerFragment.Controller = Controller;
+            //ControllerFragment = ControllerFragment.NewInstance();
+            //ControllerFragment.Controller = Controller;
 
-            var transaction = FragmentManager.BeginTransaction();
-            transaction.Add(Resource.Id.FrameFragment, ControllerFragment);
-            transaction.Hide(ControllerFragment);
-            transaction.Add(Resource.Id.FrameFragment, SettingFragment);
-            transaction.Hide(SettingFragment);
-            transaction.Commit();
+            //var transaction = FragmentManager.BeginTransaction();
+            //transaction.Add(Resource.Id.FrameFragment, ControllerFragment);
+            //transaction.Hide(ControllerFragment);
+            //transaction.Add(Resource.Id.FrameFragment, SettingFragment);
+            //transaction.Hide(SettingFragment);
+            //transaction.Commit();
 
         }
 
@@ -117,8 +117,8 @@ namespace GaganCameraController.Views
             base.OnDestroy();
 
             CamView?.FreeCameraMemory();
-            Controller.BcoreConnectionChanged -= OnConnectedBcore;
-            Controller.DisconnectBcore();
+            //Controller.BcoreConnectionChanged -= OnConnectedBcore;
+            //Controller.DisconnectBcore();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -136,17 +136,17 @@ namespace GaganCameraController.Views
             switch (item.ItemId)
             {
                 case Android.Resource.Id.Home:
-                    if (IsShowSetting)
-                    {
-                        SwitchFragment(false);
-                    }
-                    else
-                    {
+                    //if (IsShowSetting)
+                    //{
+                    //    SwitchFragment(false);
+                    //}
+                    //else
+                    //{
                         Finish();
-                    }
+                    //}
                     return false;
                 case Resource.Id.ShowMenuSetting:
-                    SwitchFragment(true);
+//                    SwitchFragment(true);
                     return false;
             }
             return base.OnOptionsItemSelected(item);
@@ -156,7 +156,7 @@ namespace GaganCameraController.Views
         {
             if (IsShowSetting)
             {
-                SwitchFragment(false);
+//                SwitchFragment(false);
                 return;
             }
             base.OnBackPressed();
@@ -164,16 +164,16 @@ namespace GaganCameraController.Views
 
         private void InitSensor()
         {
-            var manager = GetSystemService(Context.SensorService) as SensorManager;
+            //var manager = GetSystemService(Context.SensorService) as SensorManager;
 
-            manager?.RegisterListener(this, manager.GetDefaultSensor(SensorType.Accelerometer), SensorDelay.Ui);
+            //manager?.RegisterListener(this, manager.GetDefaultSensor(SensorType.Accelerometer), SensorDelay.Ui);
         }
 
         private void FinishSensor()
         {
-            var manager = GetSystemService(SensorService) as SensorManager;
+            //var manager = GetSystemService(SensorService) as SensorManager;
 
-            manager?.UnregisterListener(this);
+            //manager?.UnregisterListener(this);
         }
 
         public void BeginStream()
